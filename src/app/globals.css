@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #182162;
+  --navy-light: #1e2a7a;
+  --green-brand: #00C875;
+  --green-dark: #00A060;
+  --coral: #F26B43;
+  --sky: #7FCEEC;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Кастомный скроллбар */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Горизонтальный скролл без полосы прокрутки */
+  .scroll-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scroll-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Кнопки */
+  .btn-primary {
+    @apply bg-[#00C875] text-[#063a1f] font-bold text-sm px-5 py-3 rounded-full
+           hover:bg-[#00A060] active:scale-95 transition-all duration-150 cursor-pointer;
+  }
+
+  .btn-navy {
+    @apply bg-[#182162] text-white font-semibold text-sm px-5 py-3 rounded-full
+           hover:bg-[#1e2a7a] active:scale-95 transition-all duration-150 cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply border border-[#182162] text-[#182162] font-semibold text-sm px-5 py-3 rounded-full
+           hover:bg-[#182162] hover:text-white active:scale-95 transition-all duration-150 cursor-pointer;
+  }
+
+  /* Карточки */
+  .product-card {
+    @apply bg-white rounded-2xl border border-gray-100 overflow-hidden
+           hover:border-gray-200 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer;
+  }
+}
+
+/* Анимации с задержкой */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+
+/* Стиль выделения текста в цвет бренда */
+::selection {
+  background: #00C875;
+  color: #063a1f;
+}
