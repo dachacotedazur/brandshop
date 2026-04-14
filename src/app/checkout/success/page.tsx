@@ -1,11 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { useEffect, Suspense } from 'react'
 import { useCartStore } from '@/store/cart'
 import { useSearchParams } from 'next/navigation'
 
-export default function CheckoutSuccessPage() {
+function CheckoutSuccessContent() {
   const { clearCart } = useCartStore()
   const searchParams = useSearchParams()
   const orderId = searchParams.get('order_id')
@@ -70,5 +70,13 @@ export default function CheckoutSuccessPage() {
       </div>
 
     </div>
+  )
+}
+
+export default function CheckoutSuccessPage() {
+  return (
+    <Suspense>
+      <CheckoutSuccessContent />
+    </Suspense>
   )
 }
