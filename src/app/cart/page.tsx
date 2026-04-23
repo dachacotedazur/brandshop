@@ -218,18 +218,19 @@ export default function CartPage() {
       {/* ============================================================
           MOBILE
       ============================================================ */}
-      <div className="lg:hidden max-w-md mx-auto">
+      <div className="lg:hidden">
         {items.length === 0 ? (
           <>
-            <Header />
             <EmptyCart />
             <TabBar active="cart" />
           </>
         ) : (
           <>
-            <div className="bg-[#182162] px-5 py-3.5 flex items-center justify-between sticky top-0 z-50">
-              <h1 className="text-white text-[17px] font-bold">Корзина</h1>
-              <span className="text-white/50 text-[13px]">{items.length} товара</span>
+            <div className="bg-[#182162] sticky top-0 z-50">
+              <div className="max-w-md mx-auto px-5 py-3.5 flex items-center justify-between">
+                <h1 className="text-white text-[17px] font-bold">Корзина</h1>
+                <span className="text-white/50 text-[13px]">{items.length} товара</span>
+              </div>
             </div>
 
             <main className="pb-40">

@@ -109,11 +109,13 @@ export default function WishlistPage() {
       {/* ============================================================
           MOBILE
       ============================================================ */}
-      <div className="lg:hidden max-w-md mx-auto">
+      <div className="lg:hidden">
         <main className="pb-24">
 
-          <div className="bg-[#182162] px-5 pt-4 pb-5">
-            <h1 className="text-white text-[22px] font-bold tracking-tight">Избранное</h1>
+          <div className="bg-[#182162]">
+            <div className="max-w-md mx-auto px-5 pt-4 pb-5">
+              <h1 className="text-white text-[22px] font-bold tracking-tight">Избранное</h1>
+            </div>
           </div>
 
           <div className="py-16 text-center px-5">

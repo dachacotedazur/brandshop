@@ -170,10 +170,11 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       {/* ============================================================
           MOBILE LAYOUT
       ============================================================ */}
-      <div className="lg:hidden max-w-md mx-auto">
+      <div className="lg:hidden">
 
         {/* Top nav */}
-        <div className="bg-[#182162] px-5 py-3.5 flex items-center justify-between sticky top-0 z-50">
+        <div className="bg-[#182162] sticky top-0 z-50">
+          <div className="max-w-md mx-auto px-5 py-3.5 flex items-center justify-between">
           <Link href="/catalog" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M9 3L5 7l4 4" stroke="white" strokeWidth="1.5"
@@ -187,6 +188,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 stroke="white" strokeWidth="1.4"/>
             </svg>
           </button>
+          </div>
         </div>
 
         <main className="pb-32">

@@ -352,13 +352,13 @@ export default function HomePage() {
         {/* ============================================================
             MOBILE LAYOUT
         ============================================================ */}
-        <div className="lg:hidden max-w-md mx-auto">
+        <div className="lg:hidden">
 
           {/* Hero */}
-          <div className="bg-[#182162] px-5 pt-5 pb-8 relative overflow-hidden">
+          <div className="bg-[#182162] relative overflow-hidden">
             <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-white/5" />
             <div className="absolute top-10 -right-4 w-28 h-28 rounded-full bg-[#00C875]/10" />
-            <div className="relative z-10">
+            <div className="max-w-md mx-auto px-5 pt-5 pb-8 relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#00C875]" />
                 <span className="text-[#00C875] text-[11px] font-bold tracking-widest uppercase">

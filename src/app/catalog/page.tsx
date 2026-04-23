@@ -176,18 +176,19 @@ export default function CatalogPage() {
       {/* ============================================================
           MOBILE LAYOUT
       ============================================================ */}
-      <div className="lg:hidden max-w-md mx-auto">
+      <div className="lg:hidden">
         <main className="pb-24">
 
           {/* Page header */}
-          <div className="bg-[#182162] px-5 pt-4 pb-5">
-            <h1 className="text-white text-[22px] font-bold tracking-tight mb-1">Каталог</h1>
-            <p className="text-white/40 text-[13px]">
-              {availableProducts.length} товаров · Click × Kuznetsovs Gallery
-            </p>
+          <div className="bg-[#182162]">
+            <div className="max-w-md mx-auto px-5 pt-4 pb-5">
+              <h1 className="text-white text-[22px] font-bold tracking-tight mb-1">Каталог</h1>
+              <p className="text-white/40 text-[13px]">
+                {availableProducts.length} товаров · Click × Kuznetsovs Gallery
+              </p>
 
-            {/* Category tabs */}
-            <div className="flex gap-2 mt-4 overflow-x-auto pb-1 scrollbar-none">
+              {/* Category tabs */}
+              <div className="flex gap-2 mt-4 overflow-x-auto pb-1 scrollbar-none">
               {categories.map(cat => (
                 <button
                   key={cat.id}
@@ -201,6 +202,7 @@ export default function CatalogPage() {
                   {cat.label}
                 </button>
               ))}
+            </div>
             </div>
           </div>
 

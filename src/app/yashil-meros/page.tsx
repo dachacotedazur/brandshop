@@ -230,10 +230,11 @@ export default function YashilMerosPage() {
       {/* ============================================================
           MOBILE
       ============================================================ */}
-      <div className="lg:hidden max-w-md mx-auto">
+      <div className="lg:hidden">
         <main className="pb-24">
 
-          <div className="bg-[#182162] px-5 pt-6 pb-8">
+          <div className="bg-[#182162]">
+            <div className="max-w-md mx-auto px-5 pt-6 pb-8">
             <div className="w-14 h-14 bg-[#00C875] rounded-2xl flex items-center justify-center mb-4">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path d="M14 4C10 4 6 7 6 11c0 2.5 1.5 4.5 3.5 5.8V24h9v-7.2C20.5 15.5 22 13.5 22 11c0-4-4-7-8-7z"
@@ -246,6 +247,7 @@ export default function YashilMerosPage() {
             <p className="text-white/60 text-[14px] leading-relaxed">
               Экологический проект Click. Каждое действие в приложении приносит эко-баллы — они идут на посадку деревьев в Ташкенте.
             </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-3 gap-3 px-5 -mt-4">
