@@ -29,7 +29,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
         {/* Image area */}
         <div
-          className="relative h-[148px] lg:h-[210px] flex items-center justify-center overflow-hidden"
+          className="relative h-[296px] lg:h-[420px] flex items-center justify-center overflow-hidden"
           style={{ backgroundColor: product.imageBg }}
         >
           {/* Tag */}
