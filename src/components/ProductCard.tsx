@@ -50,13 +50,21 @@ export default function ProductCard({ product }: { product: Product }) {
           </svg>
         </button>
 
-        {/* Placeholder / image */}
-        <div className="w-full h-full flex items-center justify-center opacity-40">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-            <rect x="8" y="12" width="32" height="28" rx="3" stroke="white" strokeWidth="1.5"/>
-            <path d="M16 12 Q24 4 32 12" stroke="white" strokeWidth="1.5" fill="none"/>
-          </svg>
-        </div>
+        {/* Product image or placeholder */}
+        {product.image ? (
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover object-top"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center opacity-40">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="12" width="32" height="28" rx="3" stroke="white" strokeWidth="1.5"/>
+              <path d="M16 12 Q24 4 32 12" stroke="white" strokeWidth="1.5" fill="none"/>
+            </svg>
+          </div>
+        )}
 
         {/* Yashil Meros indicator */}
         {product.yashilMeros && (
