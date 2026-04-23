@@ -126,7 +126,7 @@ export const products: Product[] = [
     name: 'Авоська Yashil Meros',
     price: 90000,
     image: '/products/avoska.jpg',
-    imageBg: '#0d2010',
+    imageBg: '#e8e4d8',
     tag: 'new',
     collab: 'Ручная работа',
     category: 'eco',
