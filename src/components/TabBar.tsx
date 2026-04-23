@@ -81,7 +81,7 @@ export default function TabBar({ active }: { active?: string }) {
   const pathname = usePathname()
 
   return (
-    <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md
+    <div className="lg:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md
                     bg-white border-t border-gray-100 grid grid-cols-5 pb-safe-area z-40">
       {tabs.map((tab) => {
         const isActive = active === tab.id || pathname === tab.href

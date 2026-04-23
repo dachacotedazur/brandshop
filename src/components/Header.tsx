@@ -7,7 +7,7 @@ export default function Header() {
   const [cartCount] = useState(0)
 
   return (
-    <header className="bg-[#182162] sticky top-0 z-50">
+    <header className="lg:hidden bg-[#182162] sticky top-0 z-50">
       <div className="max-w-md mx-auto px-5 py-3.5 flex items-center justify-between">
 
         {/* Logo */}
