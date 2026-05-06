@@ -58,12 +58,12 @@ export default function HomePage() {
               <motion.div variants={fadeUp} className="flex items-center gap-2.5 mb-8">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#00C875]" />
                 <span className="text-[#00C875] text-[11px] font-bold tracking-[0.2em] uppercase">
-                  Click × Kuznetsovs Gallery × Yashil Meros
+                  Click × Yashil Meros
                 </span>
               </motion.div>
 
               {/* Slide-up lines */}
-              {['Носимое', 'искусство', 'Ташкента'].map((word, i) => (
+              {['Экология', 'Искусство', 'Ремесло'].map((word, i) => (
                 <div key={word} className="overflow-hidden">
                   <motion.h1
                     initial={{ y: 90 }}
@@ -82,8 +82,8 @@ export default function HomePage() {
                 variants={fadeUp}
                 className="text-white/50 text-[17px] leading-relaxed mt-8 mb-10 max-w-[400px]"
               >
-                Арт-коллаборации, кожа ручной работы и эко-инициатива Yashil Meros.
-                Каждая покупка — дерево в городе.
+                Ценности, воплощённые в предметах. Эко-инициатива Yashil Meros,
+                кожа ручной работы и арт. Каждая покупка — дерево в городе.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex gap-4">
@@ -362,14 +362,14 @@ export default function HomePage() {
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#00C875]" />
                 <span className="text-[#00C875] text-[11px] font-bold tracking-widest uppercase">
-                  Click × Kuznetsovs Gallery
+                  Click × Yashil Meros
                 </span>
               </div>
               <h1 className="text-white text-[28px] font-bold leading-tight tracking-tight mb-2">
-                Носимое<br />искусство<br />Ташкента
+                Экология<br />Искусство<br />Ремесло
               </h1>
               <p className="text-white/50 text-[13px] leading-relaxed mb-6 max-w-[240px]">
-                Арт-коллаборации, кожа ручной работы и эко-инициатива Yashil Meros
+                Ценности, воплощённые в предметах. Эко-инициатива, арт и кожа ручной работы
               </p>
               <div className="flex gap-3">
                 <Link href="/catalog" className="bg-[#00C875] text-[#063a1f] text-[13px] font-bold
