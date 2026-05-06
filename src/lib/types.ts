@@ -1,6 +1,6 @@
-export type ProductTag = 'art' | 'eco' | 'limited' | 'new' | 'leather' | 'handmade'
+export type ProductTag = 'art' | 'eco' | 'limited' | 'new' | 'leather' | 'handmade' | 'collab' | 'travel'
 
-export type ProductCategory = 'all' | 'clothing' | 'leather' | 'eco' | 'giftbox'
+export type ProductCategory = 'all' | 'clothing' | 'leather' | 'eco' | 'travel' | 'accessories'
 
 export interface Product {
   id: string

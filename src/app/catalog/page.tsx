@@ -9,11 +9,12 @@ import { availableProducts, getProductsByCategory } from '@/lib/products'
 import type { ProductCategory } from '@/lib/types'
 
 const categories: { id: ProductCategory; label: string; icon: string }[] = [
-  { id: 'all',      label: 'Все',      icon: '✦' },
-  { id: 'clothing', label: 'Одежда',   icon: '👕' },
-  { id: 'leather',  label: 'Кожа',     icon: '🤎' },
-  { id: 'eco',      label: 'Эко',      icon: '🌿' },
-  { id: 'giftbox',  label: 'Gift Box', icon: '🎁' },
+  { id: 'all',         label: 'Все',         icon: '✦' },
+  { id: 'clothing',    label: 'Одежда',      icon: '👕' },
+  { id: 'travel',      label: 'Travel',      icon: '✈️' },
+  { id: 'leather',     label: 'Кожа',        icon: '🤎' },
+  { id: 'eco',         label: 'Эко',         icon: '🌿' },
+  { id: 'accessories', label: 'Аксессуары',  icon: '🎒' },
 ]
 
 const fadeUp = {
@@ -45,7 +46,7 @@ export default function CatalogPage() {
         <div className="bg-[#182162]">
           <div className="max-w-7xl mx-auto px-8 py-8">
             <p className="text-[#00C875] text-[11px] font-bold tracking-[0.2em] uppercase mb-1">
-              Click × Kuznetsovs Gallery
+              Click × Yashil Meros
             </p>
             <h1 className="text-white text-[36px] font-extrabold tracking-tight">
               Каталог
@@ -184,7 +185,7 @@ export default function CatalogPage() {
             <div className="max-w-md mx-auto px-5 pt-4 pb-5">
               <h1 className="text-white text-[22px] font-bold tracking-tight mb-1">Каталог</h1>
               <p className="text-white/40 text-[13px]">
-                {availableProducts.length} товаров · Click × Kuznetsovs Gallery
+                {availableProducts.length} товаров · Click × Yashil Meros
               </p>
 
               {/* Category tabs */}
