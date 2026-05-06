@@ -4,11 +4,12 @@ import { useState } from 'react'
 import type { ProductCategory } from '@/lib/types'
 
 const categories: { id: ProductCategory; label: string; labelUz: string; icon: string }[] = [
-  { id: 'all',      label: 'Все',      labelUz: 'Hammasi', icon: '▤' },
-  { id: 'clothing', label: 'Одежда',   labelUz: 'Kiyim',   icon: '◈' },
-  { id: 'leather',  label: 'Кожа',     labelUz: 'Teri',    icon: '◇' },
-  { id: 'eco',      label: 'Эко',      labelUz: 'Eko',     icon: '◉' },
-  { id: 'giftbox',  label: 'Gift Box', labelUz: 'Sovg\'a', icon: '◫' },
+  { id: 'all',         label: 'Все',        labelUz: 'Hammasi', icon: '▤' },
+  { id: 'clothing',    label: 'Одежда',     labelUz: 'Kiyim',   icon: '◈' },
+  { id: 'travel',      label: 'Travel',     labelUz: 'Sayohat', icon: '✈' },
+  { id: 'leather',     label: 'Кожа',       labelUz: 'Teri',    icon: '◇' },
+  { id: 'eco',         label: 'Эко',        labelUz: 'Eko',     icon: '◉' },
+  { id: 'accessories', label: 'Аксессуары', labelUz: 'Aksess',  icon: '◫' },
 ]
 
 interface Props {
