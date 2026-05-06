@@ -11,6 +11,8 @@ const tagConfig: Record<ProductTag, { label: string; bg: string; text: string }>
   new:      { label: 'Новое',    bg: '#00C875', text: '#063a1f' },
   leather:  { label: 'Кожа',     bg: '#8B6914', text: '#fff' },
   handmade: { label: 'Handmade', bg: '#6B4C9A', text: '#fff' },
+  collab:   { label: 'Collab',   bg: '#F26B43', text: '#fff' },
+  travel:   { label: 'Travel',   bg: '#182162', text: '#fff' },
 }
 
 function formatPrice(price: number): string {
