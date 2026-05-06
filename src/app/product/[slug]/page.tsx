@@ -1,10 +1,13 @@
 'use client'
 
+import { useState } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { products } from '@/lib/products'
 import TabBar from '@/components/TabBar'
+
+const SIZES = ['S', 'M', 'L']
 
 function formatPrice(n: number) {
   return new Intl.NumberFormat('ru-RU').format(n)
@@ -17,6 +20,9 @@ const tagLabels: Record<string, string> = {
 export default function ProductPage({ params }: { params: { slug: string } }) {
   const product = products.find(p => p.slug === params.slug)
   if (!product) notFound()
+
+  const hasSize = product.category === 'clothing'
+  const [selectedSize, setSelectedSize] = useState<string | null>(null)
 
   return (
     <div className="min-h-screen bg-white">
@@ -137,6 +143,28 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   )}
                 </div>
               </div>
+
+              {/* Size selector — desktop */}
+              {hasSize && (
+                <div className="mb-8">
+                  <p className="text-[#182162] text-[12px] font-bold uppercase tracking-[0.15em] mb-3">Размер</p>
+                  <div className="flex gap-2">
+                    {SIZES.map(size => (
+                      <button
+                        key={size}
+                        onClick={() => setSelectedSize(size)}
+                        className={`w-12 h-12 rounded-xl text-[14px] font-bold transition-all
+                          ${selectedSize === size
+                            ? 'bg-[#182162] text-white shadow-lg shadow-[#182162]/20'
+                            : 'bg-[#f9f8f6] text-[#182162] hover:bg-[#eeecea]'
+                          }`}
+                      >
+                        {size}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Cashback note */}
               <div className="flex items-center gap-3 bg-[#00C875]/8 rounded-2xl px-5 py-4 mb-8 border border-[#00C875]/20">
@@ -275,6 +303,28 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 )}
               </div>
             </div>
+            {/* Size selector — mobile */}
+            {hasSize && (
+              <div className="mb-5">
+                <p className="text-[#182162] text-[12px] font-bold uppercase tracking-[0.15em] mb-2.5">Размер</p>
+                <div className="flex gap-2">
+                  {SIZES.map(size => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedSize(size)}
+                      className={`w-11 h-11 rounded-xl text-[13px] font-bold transition-all
+                        ${selectedSize === size
+                          ? 'bg-[#182162] text-white shadow-md shadow-[#182162]/20'
+                          : 'bg-[#f9f8f6] text-[#182162] hover:bg-[#eeecea]'
+                        }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="flex items-center gap-3 bg-[#00C875]/8 rounded-xl px-4 py-3 mb-5 border border-[#00C875]/20">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path d="M9 2L11 7h5l-4 3 1.5 5L9 12.5 4.5 15 6 10 2 7h5L9 2z" fill="#00C875"/>
